@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonsuz Sevgiyle</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe6eb);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(255, 182, 193, 0.3);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.6em;
+      color: #b30059;
+      margin: 0;
+      text-shadow: 1px 1px 3px #ffd6e7;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    /* Galeri */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      opacity: 0;
+      animation: fadeInUp 1.5s forwards;
+    }
+
+    .gallery img:nth-child(1) { animation-delay: 0.3s; }
+    .gallery img:nth-child(2) { animation-delay: 0.5s; }
+    .gallery img:nth-child(3) { animation-delay: 0.7s; }
+    .gallery img:nth-child(4) { animation-delay: 0.9s; }
+    .gallery img:nth-child(5) { animation-delay: 1.1s; }
+    .gallery img:nth-child(6) { animation-delay: 1.3s; }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Mektup */
+    .letter {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      margin: 40px auto;
+      max-width: 800px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      line-height: 1.8;
+      color: #4d0039;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .letter h2 {
+      color: #b30059;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Zaman çizelgesi */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 60px auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #b30059;
+      top: 0;
+      bottom: 0;
+      left: 64%;
+      margin-left: -3px;
+    }
+
+    .container {
+      padding: 20px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    .container.left { left: 0; }
+    .container.right { left: 50%; }
+
+    .content {
+      padding: 20px 25px;
+      background-color: #fff;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .container.left::before {
+      content: " ";
+      position: absolute;
+      top: 15px;
+      right: -8px;
+      border-width: 8px;
+      border-style: solid;
+      border-color: transparent transparent transparent #fff;
+    }
+
+    .container.right::before {
+      content: " ";
+      position: absolute;
+      top: 15px;
+      left: -8px;
+      border-width: 8px;
+      border-style: solid;
+      border-color: transparent #fff transparent transparent;
+    }
+
+    .container.right .content {
+      left: 20px;
+    }
+
+    .container.left .content {
+      left: 0;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #b30059;
+      font-style: italic;
+    }
+
+    /* Müzik butonu */
+    #musicControl {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #b30059;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    #musicControl:hover {
+      transform: scale(1.1);
+      background-color: #d6006f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>💖 Sonsuz Sevgiyle 💖</h1>
+  </header>
+
+  <section class="gallery">
+    <img src="foto1.jpg" alt="Fotoğraf 1">
+    <img src="foto2.jpg" alt="Fotoğraf 2">
+    <img src="foto3.jpg" alt="Fotoğraf 3">
+    <img src="foto4.jpg" alt="Fotoğraf 4">
+    <img src="foto5.jpg" alt="Fotoğraf 5">
+    <img src="foto6.jpg" alt="Fotoğraf 6">
+  </section>
+
+  <section class="letter">
+    <h2>💌 Kelimeler Kifayetsiz Ama Denedim 💌</h2>
+    <p>
+      Sevgilim,<br><br>
+      Birlikte geçirdiğimiz her an, hayatımın en değerli hazinesi. Seninle gülmek, seninle ağlamak, seninle sadece var olmak bile bana mutluluk veriyor.<br><br>
+      Sen benim en güzel sürprizimsin, en tatlı maceramsın, en sıcak yuvamdın. Her sabah seni düşünerek uyanmak, her gece senin için şükretmek... İşte bu benim için aşk.<br><br>
+      Bu yıldönümünde sana söylemek istiyorum ki: Seninle geçirdiğim her gün bir armağan, her an bir mucize. Daha nice yıllara, daha nice mutlu anlara...<br><br>
+      Sonsuza kadar seninle olmak istiyorum.<br><br>
+      Sonsuz sevgiyle... ❤️
+    </p>
+  </section>
+
+  <section class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h3>🌹 İlk Tanışma</h3>
+        <p>O gün gözlerinle tanıştım, ve o andan beri başka hiçbir yere bakamadım.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h3>💞 İlk Gülüş</h3>
+        <p>Gülüşünle birlikte hayatımın tonları pembeleşti, kalbim yeniden doğdu.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h3>🎁 Beş Yıl</h3>
+        <p>Beş yıl geçti… ve her günü seninle olduğu için anlam kazandı.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h3>💍 Bugün</h3>
+        <p>Bugün hâlâ aynı kalp, aynı sevgi, aynı heyecanla seninle.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Sonsuz Sevgiyle – Made Bye Your Love 💖
+  </footer>
+
+  <!-- Müzik -->
+  <audio id="bgMusic" src="music.mp3" loop></audio>
+  <button id="musicControl">🎵</button>
+
+  <script>
+    const btn = document.getElementById("musicControl");
+    const music = document.getElementById("bgMusic");
+    let playing = false;
+
+    btn.addEventListener("click", () => {
+      if (!playing) {
+        music.play();
+        btn.textContent = "⏸️";
+      } else {
+        music.pause();
+        btn.textContent = "🎵";
+      }
+      playing = !playing;
+    });
+  </script>
+</body>
+</html>
